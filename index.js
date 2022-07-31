@@ -1,58 +1,15 @@
-// const items = [
-// {Matthew.26.41}
-// {Luke.4.12-13}
-// {1%20Corinthians.10.13}
-// {Mark.14.38}
-// {Matthew.6.13}
-// {Luke.22.40}
-// {1%20Corinthians.7.2}
-// {Psalms.26.2}
-// {Jeremiah.17.10}
-// {Ephesians.6.11}
-// {James.1.2-4}
-// {James.1.12-13}
-// {James.4.7}
-// {1%20Peter.5.8}
-// {1%20Corinthians.6.18-20}
-// {Romans.6.12-14}
-// {Galatians.5.17}
-// {1%20Timothy.6.8-10}
-// {1%20Peter.4.1-2}
-// {1%20John.2.15-1}
-// ]
-const items = [
-{bookID: 40, chapterID: 26, verseID: 40026041,  verseName: 'Matthew.26.41'},
-{bookID: 42, chapterID: 4,  verseID: 42004012,  verseName: 'Luke.4.12-13'}
-// {bookID: 46, chapterID: 10, verseID: ,  verseName: '1%20Corinthians.10.13'}
-// {bookID: 41, chapterID: 14, verseID: ,  verseName: 'Mark.14.38'}
-// {bookID: 40, chapterID: 6,  verseID: , verseName: 'Matthew.6.13'}
-// {bookID: 42, chapterID: 22, verseID: ,  verseName: 'Luke.22.40'}
-// {bookID: 46, chapterID: 7,  verseID: , verseName: '1%20Corinthians.7.2'}
-// {bookID: 19, chapterID: 26, verseID: ,  verseName: 'Psalms.26.2'}
-// {bookID: 24, chapterID: 17, verseID: ,  verseName: 'Jeremiah.17.10'}
-// {bookID: 49, chapterID: 6,  verseID: , verseName: 'Ephesians.6.11'}
-// {bookID: 59, chapterID: 1,  verseID: ,  verseName: 'James.1.2-4'}
-// {bookID: 59, chapterID: 1,  verseID: ,  verseName: 'James.1.12-13'}
-// {bookID: 59, chapterID: 4,  verseID: , verseName: 'James.4.7'}
-// {bookID: 60, chapterID: 5,  verseID: , verseName: '1%20Peter.5.8'}
-// {bookID: 46, chapterID: 6,  verseID: ,  verseName: '1%20Corinthians.6.18-20'}
-// {bookID: 45, chapterID: 6,  verseID: ,  verseName: 'Romans.6.12-14'}
-// {bookID: 48, chapterID: 5,  verseID: , verseName: 'Galatians.5.17'}
-// {bookID: 54, chapterID: 6,  verseID: ,  verseName: '1%20Timothy.6.8-10'}
-// {bookID: 60, chapterID: 4,  verseID: ,  verseName: '1%20Peter.4.1-2'}
-// {bookID: 62, chapterID: 2,  verseID: , verseName: '1%20John.2.15-1'}
-]
-
+const items = [{"book":"John","chapter":16,"id":27,"bookNum":43,"finalVerseID":"43016027"},{"book":"Joshua","chapter":1,"id":9,"bookNum":6,"finalVerseID":"06001009"},{"book":"Jude","chapter":1,"id":21,"bookNum":65,"finalVerseID":"65001021"},{"book":"Psalms","chapter":36,"id":7,"bookNum":19,"finalVerseID":"19036007"},{"book":"Psalms","chapter":109,"id":26,"bookNum":19,"finalVerseID":"19109026"},{"book":"Romans","chapter":5,"id":8,"bookNum":45,"finalVerseID":"45005008"},{"book":"1 Corinthians","chapter":13,"id":13,"bookNum":46,"finalVerseID":"46013013"},{"book":"Zephaniah","chapter":3,"id":17,"bookNum":36,"finalVerseID":"36003017"},{"book":"1 John","chapter":3,"id":1,"bookNum":62,"finalVerseID":"62003001"},{"book":"1 John","chapter":4,"id":7,"bookNum":62,"finalVerseID":"62004007"},{"book":"Romans","chapter":5,"id":5,"bookNum":45,"finalVerseID":"45005005"},{"book":"1 John","chapter":4,"id":8,"bookNum":62,"finalVerseID":"62004008"},{"book":"1 John","chapter":4,"id":16,"bookNum":62,"finalVerseID":"62004016"},{"book":"1 John","chapter":4,"id":18,"bookNum":62,"finalVerseID":"62004018"},{"book":"1 John","chapter":4,"id":19,"bookNum":62,"finalVerseID":"62004019"},{"book":"Galatians","chapter":2,"id":20,"bookNum":48,"finalVerseID":"48002020"},{"book":"Jeremiah","chapter":29,"id":11,"bookNum":24,"finalVerseID":"24029011"},{"book":"Jeremiah","chapter":31,"id":3,"bookNum":24,"finalVerseID":"24031003"},{"book":"John","chapter":3,"id":16,"bookNum":43,"finalVerseID":"43003016"},{"book":"John","chapter":15,"id":13,"bookNum":43,"finalVerseID":"43015013"},{"book":"Psalms","chapter":86,"id":15,"bookNum":19,"finalVerseID":"19086015"},{"book":"Psalms","chapter":136,"id":26,"bookNum":19,"finalVerseID":"19136026"},{"book":"Deuteronomy","chapter":7,"id":9,"bookNum":5,"finalVerseID":"05007009"},{"book":"Ephesians","chapter":5,"id":25,"bookNum":49,"finalVerseID":"49005025"},{"book":"Isaiah","chapter":54,"id":10,"bookNum":23,"finalVerseID":"23054010"},{"book":"2 Thessalonians","chapter":3,"id":5,"bookNum":53,"finalVerseID":"53003005"},{"book":"John","chapter":15,"id":9,"bookNum":43,"finalVerseID":"43015009"},{"book":"John","chapter":15,"id":12,"bookNum":43,"finalVerseID":"43015012"},{"book":"Colossians","chapter":3,"id":14,"bookNum":51,"finalVerseID":"51003014"},{"book":"Ephesians","chapter":3,"id":19,"bookNum":49,"finalVerseID":"49003019"},{"book":"Psalms","chapter":63,"id":3,"bookNum":19,"finalVerseID":"19063003"},{"book":"Isaiah","chapter":41,"id":10,"bookNum":23,"finalVerseID":"23041010"}]
 
 let item = items[Math.floor(Math.random()*items.length)];
-item = items[0]
 
-
-
-fetch(`http://cors.northland.dev/https://bible-go-api.rkeplin.com/v1/books/${item.bookID}/chapters/${item.chapterID}/${item.verseID}`,{mode : 'cors',headers: {
+fetch(`http://cors.northland.dev/https://bible-go-api.rkeplin.com/v1/books/${item.bookID}/chapters/${item.chapterID}/${item.finalVerseID}?translation=NLT`,{mode : 'cors',headers: {
     'Content-Type': 'application/json'
   }})
     .then(response => response.text())
-    .then(data => console.log(data));
+    .then(data => {
+      x = JSON.parse(data)
+      document.getElementById('text').innerHTML = x.verse;
+      document.getElementById('refrence').innerHTML = `${x.book.name} ${x.chapterId}:${x.verseId}`;
+      });
 
 
