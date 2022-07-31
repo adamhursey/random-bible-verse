@@ -2,7 +2,7 @@ const items = [{"book":"John","chapter":16,"id":27,"bookNum":43,"finalVerseID":"
 
 let item = items[Math.floor(Math.random()*items.length)];
 
-fetch(`http://cors.northland.dev/https://bible-go-api.rkeplin.com/v1/books/${item.bookID}/chapters/${item.chapterID}/${item.finalVerseID}?translation=NLT`,{mode : 'cors',headers: {
+fetch(`https://cors.northland.dev/https://bible-go-api.rkeplin.com/v1/books/${item.bookID}/chapters/${item.chapterID}/${item.finalVerseID}?translation=NLT`,{mode : 'cors',headers: {
     'Content-Type': 'application/json'
   }})
     .then(response => response.text())
